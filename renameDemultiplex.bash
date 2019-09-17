@@ -1,7 +1,7 @@
 # This script converts the standard PIRE fish ID in a demultiplex file into an expanded base name for the fq files
 # This script should be run line by line, first deleting the `-i` option of sed, until desired output is confirmed
 
-# update fq basenames inside demultiplex decode files
+# update these variables as neccessary
 SpCODE=Sde
 PREFIX=PIRE2019
 SITE=Mat
