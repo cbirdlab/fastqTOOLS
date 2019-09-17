@@ -9,6 +9,12 @@ SITE=Mat
 # make sure that files don't have CRLF
 ls *${SpCODE}*_demultiplex.txt | parallel --no-notice -q sed -i 's/\r$//g'
 
+# add GG to barcodes if it's not there
+PREFIX=$(cat *${SpCODE}*_demultiplex.txt | head -1 | cut -c1-2)
+if [ "${PREFIX}" != "GG" ]; then
+	ls *${SpCODE}*_demultiplex.txt | parallel --no-notice -q sed -i 's/^/GG/g'
+fi
+
 # add prefix
 ls *${SpCODE}*_demultiplex.txt | parallel --no-notice -j12 -q sed -i "s/\t$SpCODE/\t$PREFIX-$SpCODE/" {} 
 
