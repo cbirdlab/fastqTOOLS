@@ -1,8 +1,10 @@
+#!/bin/bash
+# To run this script, ".fq" files must use the R1/R2 naming convention and be located in the same directory as you are running this script "bash ErrorRateCalculation.bash".
 ErrorRateCalc () {
 	fqBase=$1
 	for barcode in CGATGCTCTGCA AAGCCGGTTGCA; do 
 		for read in R1 R2; do 
-			echo fqBase,read,barcode,P1del,P2del > ${fqBase}_${barcode}_${read}_Summary.csv #Finish adding summary statistics here and line 53
+			echo fqBase,read,barcode,P1del,P2del,PropP1Del,PropP2Del,PropNoDels,PropOneIns,PropTwoIns > ${fqBase}_${barcode}_${read}_Summary.csv #Finish adding summary statistics here and line 53
 			# Calculating number of delitions in position 1
 
 			TwoDels=$(agrep -3 -D100 -I100 "^${barcode}" ${fqBase}.${read}.fq | head -n -1 | wc -l)
