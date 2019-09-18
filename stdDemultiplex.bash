@@ -1,5 +1,6 @@
 # This script converts the standard PIRE fish ID in a demultiplex file into an expanded base name for the fq files
-# This script should be run line by line, first deleting the `-i` option of sed, until desired output is confirmed
+# This script should be run line by line, first deleting the `-i` option of sed, until desired output is confirmed, 
+# then adding the `-i` again to change the file
 
 # update these variables as neccessary
 SpCODE=Aur
