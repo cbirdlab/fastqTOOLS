@@ -6,6 +6,7 @@
 #chmod 777 pasteIndices2Reads.bash
 
 #this script is meant to be run in conjunction with GNU parallel
+# example line to run script
 #ls *F.fq.gz | sed 's/\.F\.fq\.gz//g' | parallel -j7 --no-notice ./pasteIndices2Reads.bash {}
 
 #read in file base name
