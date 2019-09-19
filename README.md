@@ -7,4 +7,4 @@ Scripts to manipulate and extract data from fastq files
 * [stdDemultiplex.bash](https://github.com/cbirdlab/fastqTOOLS/blob/master/stdDemultiplex.bash)
   Script to modify PIRE Fish ID's to the desired fastq base name and add `GG` to the barcodes in the demultiplex decode files
 * [ErrorRateCalculation.bash](https://github.com/cbirdlab/fastqTOOLS/blob/master/ErrorRateCalculation.bash)
-  Script that outputs the propotion of sequences with insertions or deletions before a given barcode.
+  Script that outputs the propotion of sequences with insertions or deletions in the first 16bp of newRAD.
