@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# This script collects data and calculates rudimentary statistics on rates of deletions and mismatches in the first 
+# 16 bases of SbfI digested newRAD fastq files
+
+# Motif of first 16 bases:
+## 2bp of SbfI in Ligation1 Adapter - 8bp of BARCODE - 4bp of SbfI overhang, ligation 1 site - 2 bp of SbfI in individual
+## Oligo                            - Oligo          - 1 Strand Oligo, 1 Fish                - Fish
+
 # For this script to work, ".fq" files must use the R1/R2 naming convention and be located in the same directory as 
 # you are running this script "bash ErrorRateCalculation.bash".
 
