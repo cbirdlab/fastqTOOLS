@@ -1,5 +1,11 @@
 #!/bin/bash
-# To run this script, ".fq" files must use the R1/R2 naming convention and be located in the same directory as you are running this script "bash ErrorRateCalculation.bash".
+
+# For this script to work, ".fq" files must use the R1/R2 naming convention and be located in the same directory as 
+# you are running this script "bash ErrorRateCalculation.bash".
+
+# To run:
+# bash ErrorRateCalculation.bash
+
 ErrorRateCalc () {
 	fqBase=$1
 	for barcode in CGATGCTCTGCA AAGCCGGTTGCA; do 
