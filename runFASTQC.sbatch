@@ -9,6 +9,7 @@
 #SBATCH --nodes=1
 
 module load fastqc
+module load parallel
 
 # for help, `fastqc -h`
 
