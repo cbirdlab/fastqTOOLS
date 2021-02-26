@@ -22,4 +22,4 @@ if [ ! -d FASTQC ]; then
 fi
 
 # feed all files ending in fq to fastqc using parallel
-ls ${fqPATH}*fq | parallel --no-notice -j20 "fastqc {} -o FASTQC"
+ls ${fqPATH}*fq.gz | parallel --no-notice -j20 "fastqc {} -o FASTQC"
