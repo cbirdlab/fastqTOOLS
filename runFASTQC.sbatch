@@ -10,6 +10,7 @@
 
 module load fastqc
 module load parallel
+module load multiqc
 
 # for help, `fastqc -h`
 
@@ -23,3 +24,7 @@ fi
 
 # feed all files ending in fq to fastqc using parallel
 ls ${fqPATH}*fq.gz | parallel --no-notice -j20 "fastqc {} -o FASTQC --threads 1"
+
+# run multiqc on the fastqc output
+
+multiqc FASTQC -o FASTQC 
