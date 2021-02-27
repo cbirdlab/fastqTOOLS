@@ -27,4 +27,9 @@ ls ${fqPATH}*fq.gz | parallel --no-notice -j20 "fastqc {} -o FASTQC --threads 1"
 
 # run multiqc on the fastqc output
 
+# make dir to catch results
+if [ ! -d MULTIQC ]; then
+  mkdir MULTIQC
+fi
+
 multiqc FASTQC -o FASTQC 
